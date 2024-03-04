@@ -1,0 +1,15 @@
+﻿<!--wwwroot/index.html-->
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Welcome to My Website!</h1>
+<p>This is the Home Page.</p>
+
+<form id="cookieForm" action="/Cookie/SaveToCookie" method="post">
+    <input type="text" name="value" id="valueInput" placeholder="Enter value"><br>
+    <input type="datetime-local" name="dateTimeString" id="dateInput"><br>
+    <button type="submit">Submit</button>
+</form>
+
+<p>@ViewBag.Message</p>

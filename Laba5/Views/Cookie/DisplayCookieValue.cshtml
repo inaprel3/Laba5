@@ -1,0 +1,39 @@
+<!--Views/Cookie/DisplayCookieValue.cshtml-->
+@{
+    ViewData["Title"] = "Display Cookie Value";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            background-color: lightcyan;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .cookie-info {
+            margin: 50px auto;
+            padding: 20px;
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="cookie-info">
+        <h1>Cookie Value</h1>
+        <p>@ViewBag.CookieValue</p>
+    </div>
+</body>
+</html>

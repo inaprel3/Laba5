@@ -1,0 +1,63 @@
+﻿<!--Views/Home/Index.cshtml-->
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            background-color: lemonchiffon;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        form {
+            margin: 50px auto;
+            padding: 20px;
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="datetime-local"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website!</h1>
+    <p>This is the Home Page.</p>
+
+    <form id="cookieForm" action="/Cookie/SaveToCookie" method="post">
+        <input type="text" name="value" id="valueInput" placeholder="Enter value"><br>
+        <input type="datetime-local" name="dateTimeString" id="dateInput"><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>@ViewBag.Message</p>
+</body>
+</html>
